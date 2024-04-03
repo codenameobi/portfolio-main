@@ -3,109 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Portfolio</title>
+    <title>Banking Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .navbar {
-            background-color: #333333;
-            padding: 15px;
-            text-align: center;
-        }
-        .navbar a {
-            color: #ffffff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-        .navbar a:hover {
-            background-color: #555555;
+            background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
             text-align: center;
         }
-        .name {
-            font-size: 36px;
+        .account-summary {
+            display: flex;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
-        .job-title {
-            font-size: 18px;
-            margin-bottom: 30px;
+        .account {
+            flex-basis: 30%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
         }
-        .portfolio-item {
-            margin-bottom: 50px;
+        .account h2 {
+            margin-top: 0;
         }
-        .portfolio-item img {
-            max-width: 100%;
-            border-radius: 10px;
+        .transaction-history {
+            overflow-x: auto;
         }
-        .portfolio-item p {
-            font-size: 16px;
-            margin-top: 10px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 14px;
-        }
-
-        /* Mobile Styles */
-        @media only screen and (max-width: 600px) {
-            .navbar a {
-                font-size: 16px;
-            }
-            .name {
-                font-size: 24px;
-            }
-            .job-title {
-                font-size: 14px;
-            }
-            .portfolio-item p {
-                font-size: 14px;
-            }
-            .footer {
-                font-size: 12px;
-            }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </div>
 
-    <div class="container" id="home">
-        <h1 class="name">Obiora Nwude</h1>
-        <h2 class="job-title">Software Engineer</h2>
-        
-        <div class="portfolio-item" id="projects">
-            <img src="https://via.placeholder.com/600x400" alt="Project 1">
-            <p>Description of Project 1</p>
+<div class="container">
+    <h1>Banking Dashboard</h1>
+    
+    <div class="account-summary">
+        <div class="account">
+            <h2>Checking Account</h2>
+            <p>Balance: $1000</p>
         </div>
-        
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/600x400" alt="Project 2">
-            <p>Description of Project 2</p>
+        <div class="account">
+            <h2>Savings Account</h2>
+            <p>Balance: $5000</p>
         </div>
-        
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/600x400" alt="Project 3">
-            <p>Description of Project 3</p>
+        <div class="account">
+            <h2>Credit Card</h2>
+            <p>Balance: -$200</p>
         </div>
     </div>
+    
+    <h2>Transaction History</h2>
+    <div class="transaction-history">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-04-01</td>
+                    <td>Supermarket</td>
+                    <td>- $50</td>
+                </tr>
+                <tr>
+                    <td>2024-03-29</td>
+                    <td>Gas Station</td>
+                    <td>- $30</td>
+                </tr>
+                <tr>
+                    <td>2024-03-25</td>
+                    <td>Deposit</td>
+                    <td>+ $500</td>
+                </tr>
+                <!-- Add more transactions as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
-    <div class="footer" id="contact">
-        &copy; 2024 John Doe. All rights reserved.
-    </div>
 </body>
 </html>
